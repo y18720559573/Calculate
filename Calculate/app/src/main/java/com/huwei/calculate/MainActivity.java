@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String FIRST_BOOT = "first_boot";
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("MainActivity1", "click a button");
-                mTextView.setText("结果=" + mResult);
+                mTextView.setText("result=" + mResult);
+                Toast.makeText(MainActivity.this, R.string.tip_click, Toast.LENGTH_SHORT).show();
             }
         });
 
